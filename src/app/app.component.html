@@ -21,11 +21,15 @@
         <td>{{movie.title}}</td>
         <img src="{{movie.movie}}" width="150" height="200">
         <td>{{movie.status}}</td>
-        <button (click)="encodeMovie()">Encode</button>
+        <button id="{{movie.title}}" (click)="encodeMovie($event)">Encode</button>
       </tr>
     </tbody>
   </table>
+</div>
+<div>
   <input type="checkbox"> Select All<br>
   <p>{{encodingMessage}}</p>
+  <p>{{values}}</p>
+  <p>{{test}}</p>
 </div>
 <router-outlet></router-outlet>

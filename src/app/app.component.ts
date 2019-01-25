@@ -11,6 +11,8 @@ export class AppComponent {
   title = 'ampangularapp';
   encodingMessage;
   buttonClick = false;
+  values = '';
+  test = '';
 
   // fake data
   public moviesList = [
@@ -24,11 +26,8 @@ export class AppComponent {
     url: '//seusherams-usct.streaming.media.azure.net/c67cdfc7-2375-49e9-b413-d192cb48c60d/SampleVideo_1280x720_1mb.ism/manifest'}
   ];
 
-  encodeMovie() {
-
-    this.buttonClick = true;
-    console.log('clicked!' + this.buttonClick);
-    this.encodingMessage = '...encoding your video...';
-
+  encodeMovie(event: any) {
+    console.log(event.target);
+    this.test = 'encoding...' + event.target.id;
   }
 }
